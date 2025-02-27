@@ -1,0 +1,12 @@
+PRAGMA foreign_keys=OFF;
+BEGIN TRANSACTION;
+CREATE TABLE user (
+	id INTEGER NOT NULL, 
+	username VARCHAR(150) NOT NULL, 
+	email VARCHAR(150) NOT NULL, 
+	password VARCHAR(200) NOT NULL, 
+	PRIMARY KEY (id), 
+	UNIQUE (username), 
+	UNIQUE (email)
+);
+COMMIT;

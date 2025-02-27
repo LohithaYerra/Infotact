@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <input type="text" id="custom-input" placeholder="Enter something..." />
+        <form id="generator-form">
+            <input type="number" id="passwordLength" placeholder="Password Length (min 6)" min="6" required />
+        
+            <select id="passwordFormat">
+                <option value="Alphabet Only (Uppercase)">Alphabet Only (Uppercase)</option>
+                <option value="Alphabet Only (Lowercase)">Alphabet Only (Lowercase)</option>
+                <option value="Alphabet Only (Both Upper & Lower)">Alphabet Only (Both Upper & Lower)</option>
+                <option value="Numerical Only">Numerical Only</option>
+                <option value="Special Characters Only">Special Characters Only</option>
+                <option value="Alphanumeric">Alphanumeric</option>
+                <option value="Alphanumeric + Special Characters">Alphanumeric + Special Characters</option>
+                <option value="Hexadecimal (0-9, A-F)">Hexadecimal (0-9, A-F)</option>
+            </select>
+        
+            <button type="submit">Generate Password</button>
+        </form>
+        
+        <p id="generatedPassword"></p>
+
+        <button id="logout-btn" class="logout-button">Logout</button>
+
+        <button id="download-btn">Download Passwords</button>
+        
+        <button id="clear-btn">Clear Passwords</button>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    
+</body>
+</html>
